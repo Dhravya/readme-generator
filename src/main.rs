@@ -80,6 +80,8 @@ fn file_factory(project_name:String,
         content.push_str(format!("![{}]({})\n", project_name.trim(), demo.trim()).as_str());
     }
 
+    let mut use_command: &str = "write use command here"; 
+    // Installation part
     if installation_command.len() > 5 {
         content.push_str(format!("\n### Installation\n```\n{}\n```\n", installation_command.trim().replace("&& ", "\n")).as_str());
     }
@@ -96,9 +98,8 @@ fn file_factory(project_name:String,
         installation_command.push_str("\n### Installation\n```");
 
         repo_url.stdout.as_slice().split(|&x| x == b'\n').for_each(|x| {
-            installation_command.push_str(format!("\ngit clone {}", String::from_utf8_lossy(x)).as_str());
-            // Stops the iterator
-            return;
+            installation_command.push_str(format!("\ngit clone {}", String::from_utf8_lossy(x)).as_str()
+        );
         });
 
         // Change directory - Gets the directory from github link or the current directory
@@ -109,18 +110,42 @@ fn file_factory(project_name:String,
         // Checks the current folder. If it has Cargo.toml, package.json or requirements.txt, then generate the installation command automatically
         if std::fs::read_to_string("Cargo.toml").is_ok() {
             installation_command.push_str("cargo install");
+            use_command = "cargo run";
         }
         else if std::fs::read_to_string("package.json").is_ok() {
             installation_command.push_str("npm install");
+            use_command = "npm start";
         }
         else if std::fs::read_to_string("requirements.txt").is_ok() {
             installation_command.push_str("pip install -r requirements.txt");
+            use_command = "python main.py";
         }
 
         installation_command.push_str("\n```\n");
 
         content.push_str(installation_command.as_str());
     }
+
+    // Usage part
+    content.push_str("\n### Usage\n");
+    content.push_str("```\n");
+    content.push_str(use_command);
+    content.push_str("\n```\n");
+
+    // Contributing part
+    content.push_str("\n### Contributing\n");
+    content.push_str("");
+
+    // License part
+    content.push_str("\n### License\n");
+    content.push_str(format!("This project is licensed under the {} license", license.trim()).as_str());
+
+    // Show support part
+    content.push_str("\n### Show your support\n");
+    content.push_str("Leave a ⭐ if you like this project\n");
+    
+    content.push_str("***");
+    content.push_str("Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)");
 
     // Save the file
     file.write_all(content.as_bytes()).expect("Failed to write to file");

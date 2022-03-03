@@ -1,7 +1,7 @@
 <div align="center">
-<h1 align="center">Welcome to very cool</h1>
+<h1 align="center">Welcome to test</h1>
 <img alt="License: " src="https://img.shields.io/badge/License--blue" /><br>
-v
+f
 </div>
 
 ***
@@ -10,6 +10,11 @@ v
 ```
 git clone https://github.com/Dhravya/readme-generator.git
 git clone 
-cd very cool
+cd test
+cargo install
+```
+
+### Usage
+```
 cargo run
 ```
