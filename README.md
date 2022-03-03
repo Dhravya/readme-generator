@@ -1,15 +1,15 @@
 <div align="center">
-<h1 align="center">Welcome to idk</h1>
-<img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /><br>
-very cool
+<h1 align="center">Welcome to very cool</h1>
+<img alt="License: " src="https://img.shields.io/badge/License--blue" /><br>
+v
 </div>
 
 ***
 
 ### Installation
 ```
-git clone []
-
-cd idk
+git clone https://github.com/Dhravya/readme-generator.git
+git clone 
+cd very cool
 cargo run
 ```

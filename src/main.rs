@@ -95,7 +95,9 @@ fn file_factory(project_name:String,
         let mut installation_command = String::new();
         installation_command.push_str("\n### Installation\n```");
 
-        installation_command.push_str(format!("\ngit clone {:?}\n", repo_url.stdout).as_str());
+        repo_url.stdout.as_slice().split(|&x| x == b'\n').for_each(|x| {
+            installation_command.push_str(format!("\ngit clone {}", String::from_utf8_lossy(x)).as_str());
+        });
 
         // Change directory - Gets the directory from github link or the current directory
         installation_command.push_str("\ncd ");
