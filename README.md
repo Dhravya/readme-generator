@@ -29,10 +29,7 @@ read-generator
 ```
 Then all you have to do is fill a form!
 
-For contributing, 
-```
-cargo run
-```
+Normally, you'd run `cargo run` but that isn't needed because i've published to crates.io
 
 
 ### License
