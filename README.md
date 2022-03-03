@@ -25,7 +25,7 @@ cargo install
 
 ### Usage
 ```
-read-generator
+readme-generator
 ```
 Then all you have to do is fill a form!
 
