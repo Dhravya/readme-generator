@@ -7,23 +7,36 @@ A simple, fast, easy README generator. Never worry about READMEs again!
 ***
 ![Readme Generator](https://us-east-1.tixte.net/uploads/img.dhravya.dev/l0ap2hcs50a.png)
 
+
 ### Installation
+
+If you want to use it, (and not bother with code), use this command:
+
+```
+cargo install readme-generator
+```
+
+For contributing:
 ```
 git clone https://github.com/Dhravya/readme-generator.git
-git clone 
 cd Readme Generator
 cargo install
 ```
 
 ### Usage
 ```
+read-generator
+```
+Then all you have to do is fill a form!
+
+For contributing, 
+```
 cargo run
 ```
 
-### Contributing
 
 ### License
-This project is licensed under the mit license
+This project is licensed under the MIT license
 ### Show your support
 Leave a ⭐ if you like this project
 ***
