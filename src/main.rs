@@ -144,7 +144,7 @@ fn file_factory(project_name:String,
     content.push_str("\n### Show your support\n");
     content.push_str("Leave a ⭐ if you like this project\n");
     
-    content.push_str("***");
+    content.push_str("\n***\n");
     content.push_str("Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)");
 
     // Save the file

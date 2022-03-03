@@ -26,4 +26,5 @@ cargo run
 This project is licensed under the mit license
 ### Show your support
 Leave a ⭐ if you like this project
-***Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)
+***
+Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)
