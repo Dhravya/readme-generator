@@ -97,6 +97,8 @@ fn file_factory(project_name:String,
 
         repo_url.stdout.as_slice().split(|&x| x == b'\n').for_each(|x| {
             installation_command.push_str(format!("\ngit clone {}", String::from_utf8_lossy(x)).as_str());
+            // Stops the iterator
+            return;
         });
 
         // Change directory - Gets the directory from github link or the current directory
