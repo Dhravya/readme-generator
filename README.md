@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">Welcome to Readme Generator</h1>
-<img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /><br>
+<img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /><br>
 A simple, fast, easy README generator. Never worry about READMEs again!
 </div>
 
