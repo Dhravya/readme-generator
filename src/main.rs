@@ -108,13 +108,13 @@ fn file_factory(project_name:String,
 
         // Checks the current folder. If it has Cargo.toml, package.json or requirements.txt, then generate the installation command automatically
         if std::fs::read_to_string("Cargo.toml").is_ok() {
-            installation_command.push_str("cargo run");
+            installation_command.push_str("cargo install");
         }
         else if std::fs::read_to_string("package.json").is_ok() {
-            installation_command.push_str("npm install\nnpm start");
+            installation_command.push_str("npm install");
         }
         else if std::fs::read_to_string("requirements.txt").is_ok() {
-            installation_command.push_str("pip install -r requirements.txt\npython main.py");
+            installation_command.push_str("pip install -r requirements.txt");
         }
 
         installation_command.push_str("\n```\n");
