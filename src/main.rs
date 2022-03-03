@@ -54,7 +54,7 @@ fn file_factory(project_name:String,
     content.push_str(format!("<h1 align=\"center\">Welcome to {}</h1>\n", project_name.trim()).as_str());
 
     let mut licenses = HashMap::new();
-    licenses.insert("mit", "<img alt=\"License: MIT\" src=\"https://img.shields.io/badge/License-MIT-yellow.svg\" />");
+    licenses.insert("mit", "<img alt=\"License: MIT\" src=\"https://img.shields.io/badge/License-MIT-blue.svg\" />");
     licenses.insert("apache", "<img alt=\"License: Apache\" src=\"https://img.shields.io/badge/license-Apache%202-blue\" />");
     licenses.insert("gpl", "<img alt=\"License: GPL\" src=\"https://img.shields.io/badge/license-GPL-blue\" />");
 
