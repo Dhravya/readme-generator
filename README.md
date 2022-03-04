@@ -4,9 +4,9 @@
 A simple, fast, easy README generator. Never worry about READMEs again!
 </div>
 
-***
-![Readme Generator](https://us-east-1.tixte.net/uploads/img.dhravya.dev/l0ap2hcs50a.png)
+---
 
+![Readme Generator](https://us-east-1.tixte.net/uploads/img.dhravya.dev/l0ap2hcs50a.png)
 
 ### Installation
 
@@ -17,6 +17,7 @@ cargo install readme-generator
 ```
 
 For contributing:
+
 ```
 git clone https://github.com/Dhravya/readme-generator.git
 cd Readme Generator
@@ -24,17 +25,21 @@ cargo install
 ```
 
 ### Usage
+
 ```
 readme-generator.exe
 ```
+
 Then all you have to do is fill a form!
 
 Normally, you'd run `cargo run` but that isn't needed because i've published to crates.io
 
-
 ### License
+
 This project is licensed under the MIT license
+
 ### Show your support
+
 Leave a ⭐ if you like this project
-***
+
 Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)
