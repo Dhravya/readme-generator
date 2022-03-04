@@ -14,10 +14,19 @@ fn main() {
         .read_line(&mut project_name)
         .expect("Failed to read line");
 
+    let mut project_logo = String::new();
+    println!(
+        "{}",
+        "Enter the image url of the project logo (Leave blank if none): ".blue()
+    );
+    stdin()
+        .read_line(&mut project_logo)
+        .expect("Failed to read line");
+
     let mut short_description = String::with_capacity(120);
     println!(
         "{}",
-        "Enter the short description (It should be short, concise to hook the reader) : ".blue()
+        "Enter the short description (It should be short, concise to hook the reader): ".blue()
     );
     stdin()
         .read_line(&mut short_description)
@@ -86,13 +95,21 @@ fn file_factory(
     let mut content = String::new();
 
     content.push_str("<div align=\"center\">\n");
-    content.push_str(
-        format!(
-            "<h1 align=\"center\">Welcome to {}</h1>\n",
-            project_name.trim()
-        )
-        .as_str(),
-    );
+    content.push_str(format!("<h1 align=\"center\">{}</h1>\n", project_name.trim()).as_str());
+
+    // Project logo
+    if image_url.trim().len() > 0 {
+        content.push_str(
+            format!(
+                "<img src=\"{}\" alt=\"{}\" align=\"center\" width=\"80\" height=\"80\">\n",
+                image_url.trim(),
+                project_name.trim()
+            )
+            .as_str(),
+        );
+    }
+
+    content.push_str("<br />\n");
 
     let mut licenses: HashMap<&str, &str> = HashMap::new();
     licenses.insert(
@@ -117,6 +134,7 @@ fn file_factory(
                 .as_str(),
             ),
     );
+    content.push_str("<br>\n");
     content.push_str("<br>\n");
 
     content.push_str(format!("{}\n", short_description.trim()).as_str());
