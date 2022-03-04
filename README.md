@@ -27,7 +27,7 @@ cargo install
 ### Usage
 
 ```
-read-generator
+readme-generator.exe
 ```
 
 Then all you have to do is fill a form!
