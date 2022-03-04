@@ -8,6 +8,14 @@ A simple, fast, easy README generator. Never worry about READMEs again!
 
 ![Readme Generator](https://us-east-1.tixte.net/uploads/img.dhravya.dev/l0ap2hcs50a.png)
 
+What it does:
+- Run the command in your project's directory
+- it will ask a few questions
+- You answer the questions 
+- It will generate a README for you, and will also add auto-generated installation and usage instructions
+
+You can then edit the README yourself as you like!
+
 ### Installation
 
 If you want to use it, (and not bother with code), use this command:
@@ -15,6 +23,9 @@ If you want to use it, (and not bother with code), use this command:
 ```
 cargo install readme-generator
 ```
+
+If you don't have cargo, you can download the [latest release](https://github.com/Dhravya/readme-generator/releases)
+This isn't recommended, because it won't be registered as a binary and you'll have to run the exe file
 
 For contributing:
 

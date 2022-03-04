@@ -145,7 +145,7 @@ fn file_factory(
                 "<img src=\"{}\" alt=\"{}\" width=\"500\" height=\"500\">\n",
                 image_url.trim(),
                 project_name.trim()
-            )
+            )   
             .as_str(),
         );
     }
