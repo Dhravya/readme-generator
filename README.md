@@ -42,6 +42,4 @@ This project is licensed under the MIT license
 
 Leave a ⭐ if you like this project
 
----
-
 Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)

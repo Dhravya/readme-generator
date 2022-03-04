@@ -114,7 +114,7 @@ fn file_factory(
     let mut licenses: HashMap<&str, &str> = HashMap::new();
     licenses.insert(
         "mit",
-        "<img alt=\"License: MIT\" src=\"https://img.shields.io/badge/License-MIT-yellow.svg\" />",
+        "<img alt=\"License: MIT\" src=\"https://img.shields.io/badge/License-MIT-blue.svg\" />",
     );
     licenses.insert("apache", "<img alt=\"License: Apache\" src=\"https://img.shields.io/badge/license-Apache%202-blue\" />");
     licenses.insert(
