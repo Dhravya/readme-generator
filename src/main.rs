@@ -185,6 +185,9 @@ fn file_factory(
             .as_slice()
             .split(|&x| x == b'\n')
             .for_each(|x| {
+                if x.is_empty() {
+                    return;
+                }
                 installation_command
                     .push_str(format!("\ngit clone {}", String::from_utf8_lossy(x)).as_str());
             });
