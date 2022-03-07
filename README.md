@@ -64,4 +64,3 @@ Leave a ⭐ if you like this project
 
 Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)
 
-### The target folder has the linux executable contributed by @Dumbo-programmer
