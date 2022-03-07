@@ -41,10 +41,19 @@ cargo install
 readme-generator.exe
 ```
 
+```
+#change to the folder
+cd target/debug
+#give it permission to run
+chmod +x readme-generator
+#run it
+readme-generator
+
+```
 Then all you have to do is fill a form!
 
 Normally, you'd run `cargo run` but that isn't needed because i've published to crates.io
-
+you can run `cargo build` to build the project for your os with rust compiler(You must have the source files)
 ### License
 
 This project is licensed under the MIT license
@@ -54,3 +63,4 @@ This project is licensed under the MIT license
 Leave a ⭐ if you like this project
 
 Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)
+
