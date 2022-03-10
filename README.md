@@ -36,20 +36,22 @@ cargo install
 ```
 
 ### Usage
-
+windows:
 ```
 readme-generator.exe
 ```
-
+Linux:
 ```
-#change to the folder
-cd target/debug
 #give it permission to run
 chmod +x readme-generator
 #run it
 readme-generator
 
 ```
+Mac:
+
+coming soon
+
 Then all you have to do is fill a form!
 
 Normally, you'd run `cargo run` but that isn't needed because i've published to crates.io
