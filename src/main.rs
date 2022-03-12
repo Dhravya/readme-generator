@@ -15,6 +15,8 @@ fn main() {
         .expect("Failed to read line");
 
     //colour the project name
+    let mut project_col = String::new();
+
     println!("{}", "Enter the project name color:(b: blue, g: green blank= default) ".blue());
     stdin()
         .read_line(&mut project_col)
@@ -102,19 +104,21 @@ fn file_factory(
     // Creating the README.md file
     let mut file = std::fs::File::create("README.md").expect("Failed to create file");
     let mut content = String::new();
-   if project_col.trim().len() > 1{
-    content.push_str("<div align=\"center\">\n");
-    content.push_str(format!("<h1 align=\"center\">{}</h1>\n", project_name.trim()).as_str());
 
-   }else if project_col == "b"{
+  
+   if project_col == "b"{
 
     content.push_str("<div align=\"center\">\n");
-    content.push_str(format!("<h1 align=\"center\" style=\"color: blue;\">{}</h1>\n", project_name.trim()).as_str());
+    content.push_str(format!("<h1 align=\"center\" style=\"color:blue\">{}</h1>\n", project_name.trim()).as_str());
 
    }else if project_col == "g"{
 
     content.push_str("<div align=\"center\">\n");
-    content.push_str(format!("<h1 align=\"center\" style=\"color: green;\">{}</h1>\n", project_name.trim()).as_str());
+    content.push_str(format!("<h1 align=\"center\" style=\"color:green\">{}</h1>\n", project_name.trim()).as_str());
+
+   }else {
+    content.push_str("<div align=\"center\">\n");
+    content.push_str(format!("<h1 align=\"center\">{}</h1>\n", project_name.trim()).as_str());
 
    }
    
