@@ -14,6 +14,13 @@ fn main() {
         .read_line(&mut project_name)
         .expect("Failed to read line");
 
+    //colour the project name
+    println!("{}", "Enter the project name color:(b: blue, g: green blank= default) ".blue());
+    stdin()
+        .read_line(&mut project_col)
+        .expect("Failed to read line");
+
+
     let mut project_logo = String::new();
     println!(
         "{}",
@@ -74,6 +81,7 @@ fn main() {
 
     file_factory(
         project_name,
+        project_col,
         short_description,
         image_url,
         license,
@@ -84,6 +92,7 @@ fn main() {
 
 fn file_factory(
     project_name: String,
+    project_col: String,
     short_description: String,
     image_url: String,
     license: String,
@@ -93,10 +102,22 @@ fn file_factory(
     // Creating the README.md file
     let mut file = std::fs::File::create("README.md").expect("Failed to create file");
     let mut content = String::new();
-
+   if project_col.trim().len() > 1{
     content.push_str("<div align=\"center\">\n");
     content.push_str(format!("<h1 align=\"center\">{}</h1>\n", project_name.trim()).as_str());
 
+   }else if project_col == "b"{
+
+    content.push_str("<div align=\"center\">\n");
+    content.push_str(format!("<h1 align=\"center\" style=\"color: blue;\">{}</h1>\n", project_name.trim()).as_str());
+
+   }else if project_col == "g"{
+
+    content.push_str("<div align=\"center\">\n");
+    content.push_str(format!("<h1 align=\"center\" style=\"color: green;\">{}</h1>\n", project_name.trim()).as_str());
+
+   }
+   
     // Project logo
     if image_url.trim().len() > 0 {
         content.push_str(
