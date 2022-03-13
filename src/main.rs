@@ -16,11 +16,19 @@ fn main() {
 
     //colour the project name
     let mut project_col = String::new();
+    let mut bg = String::new();
 
-    println!("{}", "Enter the project name color:(b: blue, g: green blank= default) ".blue());
+    println!("{}", "Enter the project name color:(HEX CODE WITHOUT # ,blank=default) ".blue());
     stdin()
         .read_line(&mut project_col)
         .expect("Failed to read line");
+    //bg color input
+    println!("{}", "Enter the project name background color:(HEX CODE WITHOUT # ,blank=default) ".blue());
+    stdin()
+        .read_line(&mut bg)
+        .expect("Failed to read line");
+
+
 
 
     let mut project_logo = String::new();
@@ -83,6 +91,7 @@ fn main() {
 
     file_factory(
         project_name,
+        bg,
         project_col,
         short_description,
         image_url,
@@ -94,6 +103,7 @@ fn main() {
 
 fn file_factory(
     project_name: String,
+    bg: String,
     project_col: String,
     short_description: String,
     image_url: String,
@@ -106,15 +116,10 @@ fn file_factory(
     let mut content = String::new();
 
   
-   if project_col == "b"{
+   if project_col.trim().len() > 0{
 
     content.push_str("<div align=\"center\">\n");
-    content.push_str(format!("<h1 align=\"center\" style=\"color:blue\">{}</h1>\n", project_name.trim()).as_str());
-
-   }else if project_col == "g"{
-
-    content.push_str("<div align=\"center\">\n");
-    content.push_str(format!("<h1 align=\"center\" style=\"color:green\">{}</h1>\n", project_name.trim()).as_str());
+    content.push_str(format!("<img alt=\"name\" align=\"center\" src=\"https://via.placeholder.com/950x42/{}/{}/?text={}\">\n", bg.trim(),project_col.trim(), project_name.trim()).as_str());
 
    }else {
     content.push_str("<div align=\"center\">\n");
