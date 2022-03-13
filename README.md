@@ -1,5 +1,6 @@
 <div align="center">
-![readme](https://img.shields.io/static/v1?label=&message=ReadmeGenerator&color=blue)
+![gen](https://img.shields.io/static/v1?label=&message=ReadmeGenerator&color=blue)       
+  <br>
 <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /><br>
 A simple, fast, easy README generator. Never worry about READMEs again!
 </div>
