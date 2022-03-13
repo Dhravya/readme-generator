@@ -1,5 +1,5 @@
 <div align="center">
-<img alt="name" align="center" src="https://via.placeholder.com/750x42/33F0FF/000000/?text=Readme+Generator">
+<img alt="name" align="center" src="https://via.placeholder.com/950x42/33F0FF/000000/?text=Readme+Generator">
   <br>
 <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /><br>
 A simple, fast, easy README generator. Never worry about READMEs again!
