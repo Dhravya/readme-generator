@@ -1,5 +1,5 @@
 <div align="center">
-[![](https://img.shields.io/badge/github-blue?style=for-the-badge)](https://github.com/hamzamohdzubair/redant)
+![](https://img.shields.io/badge/github-blue?style=for-the-badge)
   <br>
 <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /><br>
 A simple, fast, easy README generator. Never worry about READMEs again!
