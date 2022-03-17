@@ -18,12 +18,12 @@ fn main() {
     let mut project_col = String::new();
     let mut bg = String::new();
 
-    println!("{}", "Enter the project name color:(HEX CODE WITHOUT # ,blank=default) ".blue());
+    println!("{}", "Enter the project name color(Image Title):(HEX CODE WITHOUT # .Blank=Text Title) ".blue());
     stdin()
         .read_line(&mut project_col)
         .expect("Failed to read line");
     //bg color input
-    println!("{}", "Enter the project name background color:(HEX CODE WITHOUT # ,blank=default) ".blue());
+    println!("{}", "Enter the project name background color(Image Title):(HEX CODE WITHOUT # ,Blank=Text Title) ".blue());
     stdin()
         .read_line(&mut bg)
         .expect("Failed to read line");
