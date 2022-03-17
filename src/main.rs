@@ -269,7 +269,7 @@ fn file_factory(
     content.push_str("Leave a ⭐ if you like this project\n");
 
     content.push_str("\n***\n");
-    content.push_str("Readme made with 💖 using [README Generator by Dhravya Shah](https://github.com/Dhravya/readme-generator)");
+    content.push_str("Readme made generated with love");
 
     // Save the file
     file.write_all(content.as_bytes())

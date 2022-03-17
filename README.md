@@ -22,7 +22,8 @@ You can then edit the README yourself as you like!
 If you want to use it, (and not bother with code), use this command:
 
 ```
-cargo install readme-generator
+cargo install Pro-Readme-Generator
+
 ```
 
 If you don't have cargo, you can download the [latest release](https://github.com/Dhravya/readme-generator/releases)
@@ -31,7 +32,7 @@ This isn't recommended, because it won't be registered as a binary and you'll ha
 For contributing:
 
 ```
-git clone https://github.com/Dhravya/readme-generator.git
+git clone https://github.com/Dumbo-programmer/pro-readme-generator.git
 cd Readme Generator
 cargo install
 ```
