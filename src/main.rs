@@ -12,7 +12,7 @@ fn main() {
     println!("{}", "Enter the project name: ".blue());
     stdin()
         .read_line(&mut project_name)
-        .expect("Failed to read line");
+        .expect("Failed to read project name");
 
     //colour the project name
     let mut project_col = String::new();
@@ -26,7 +26,7 @@ fn main() {
     println!("{}", "Enter the project name background color(Image Title):(HEX CODE WITHOUT # ,Blank=Text Title) ".blue());
     stdin()
         .read_line(&mut bg)
-        .expect("Failed to read line");
+        .expect("Failed to read background color");
 
 
 
@@ -38,7 +38,7 @@ fn main() {
     );
     stdin()
         .read_line(&mut project_logo)
-        .expect("Failed to read line");
+        .expect("Failed to read image url");
 
     let mut short_description = String::with_capacity(120);
     println!(
@@ -47,13 +47,13 @@ fn main() {
     );
     stdin()
         .read_line(&mut short_description)
-        .expect("Failed to read line");
+        .expect("Failed to read description");
 
     let mut image_url = String::new();
     println!("{}", "Enter the image url (Leave blank if none): ".blue());
     stdin()
         .read_line(&mut image_url)
-        .expect("Failed to read line");
+        .expect("Failed to read image");
 
     let mut license = String::new();
     println!(
@@ -63,7 +63,7 @@ fn main() {
     );
     stdin()
         .read_line(&mut license)
-        .expect("Failed to read line");
+        .expect("Failed to read license");
 
     let mut demo = String::new();
     println!(
@@ -71,13 +71,13 @@ fn main() {
         "Link for image/gif demonstrating your project ".blue()
     );
     println!("{}", "(Leave blank if none): ".blue());
-    stdin().read_line(&mut demo).expect("Failed to read line");
+    stdin().read_line(&mut demo).expect("Failed to read gif");
 
     let mut installation_command = String::new();
     println!("{}","Enter the installation command(s). You can add multiple commands by seperating with && (If left blank, I will generate one for you automatically): ".blue());
     stdin()
         .read_line(&mut installation_command)
-        .expect("Failed to read line");
+        .expect("Failed to read command");
 
     // Checks
     assert!(
