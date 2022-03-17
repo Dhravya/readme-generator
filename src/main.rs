@@ -5,7 +5,7 @@ use std::io::Write;
 use std::process::Output;
 
 fn main() {
-    println!("{} {}", "README.md".green().bold(), "Generator");
+    println!("{}", "PRO! README.md Generator".green().bold());
 
     // Taking inputs from the user
     let mut project_name = String::new();
@@ -109,10 +109,10 @@ fn file_factory(
     let mut content = String::new();
 
   
-   if project_col.trim().len() > 0{
+   if bg.trim().len() > 0{
 
     content.push_str("<div align=\"center\">\n");
-    content.push_str(format!("<img alt=\"name\" align=\"center\" src=\"https://img.shields.io/badge/{}-{}?style=for-the-badge\">\n", project_name.trim(), bg.trim()).as_str());
+    content.push_str(format!("<img alt=\"name\" align=\"center\" src=\"https://img.shields.io/badge/{}-{}?style=for-the-badge\" height=\"50\">\n", project_name.trim(), bg.trim()).as_str());
 
    }else {
     content.push_str("<div align=\"center\">\n");
