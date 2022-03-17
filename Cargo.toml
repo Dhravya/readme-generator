@@ -1,8 +1,8 @@
 [package]
-name = "readme-generator"
-version = "0.1.3"
+name = "Pro Readme Generator"
+version = "1.0"
 edition = "2021"
-description = "A very easy-to-use README generator that works in your terminal. Never stress about readme again!"
+description = "A very easy-to-use multi functional README generator written in Rust that works inside your terminal. Never think about readme again!"
 license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
