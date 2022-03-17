@@ -1,9 +1,11 @@
 [package]
 name = "Pro-Readme-Generator"
 version = "1.0"
-edition = "2021"
+edition = "2022"
 description = "A very easy-to-use multi functional README generator written in Rust that works inside your terminal. Never think about readme again!"
 license = "MIT"
+authors = ["Dumbo-programmer <tawhidbinomarsjhss@gmail.com>"]
+keywords = ["readme", "tools"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
