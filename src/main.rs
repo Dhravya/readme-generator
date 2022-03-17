@@ -15,13 +15,8 @@ fn main() {
         .expect("Failed to read project name");
 
     //colour the project name
-    let mut project_col = String::new();
     let mut bg = String::new();
 
-    println!("{}", "Enter the project name color(Image Title):(HEX CODE WITHOUT # .Blank=Text Title) ".blue());
-    stdin()
-        .read_line(&mut project_col)
-        .expect("Failed to read line");
     //bg color input
     println!("{}", "Enter the project name background color(Image Title):(HEX CODE WITHOUT # ,Blank=Text Title) ".blue());
     stdin()
@@ -92,7 +87,6 @@ fn main() {
     file_factory(
         project_name,
         bg,
-        project_col,
         short_description,
         image_url,
         license,
@@ -104,7 +98,6 @@ fn main() {
 fn file_factory(
     project_name: String,
     bg: String,
-    project_col: String,
     short_description: String,
     image_url: String,
     license: String,
@@ -119,7 +112,7 @@ fn file_factory(
    if project_col.trim().len() > 0{
 
     content.push_str("<div align=\"center\">\n");
-    content.push_str(format!("<img alt=\"name\" align=\"center\" src=\"https://via.placeholder.com/950x42/{}/{}/?text={}\">\n", bg.trim(),project_col.trim(), project_name.trim()).as_str());
+    content.push_str(format!("<img alt=\"name\" align=\"center\" src=\"https://img.shields.io/badge/{}-{}?style=for-the-badge\">\n", project_name.trim(), bg.trim()).as_str());
 
    }else {
     content.push_str("<div align=\"center\">\n");
